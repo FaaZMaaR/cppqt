@@ -19,15 +19,15 @@ public:
     explicit Stopwatch(QObject *parent = nullptr);
     void start();
     void stop();
+    void clear();
+    void update_lap();
+    std::pair<int,double> get_lap();
 
 signals:
     void sig_send_time(double);
-    void sig_send_lap(int,double);
 
 public slots:
     void slot_update_time();
-    void slot_clear_time();
-    void slot_update_lap();
 };
 
 #endif // STOPWATCH_H

@@ -27,6 +27,7 @@ private:
 public slots:
     void slot_start_stop();
     void slot_update_time(double);
-    void slot_update_timelaps(int,double);
+    void slot_clear_stopwatch();
+    void slot_update_timelaps();
 };
 #endif // MAINWINDOW_H
