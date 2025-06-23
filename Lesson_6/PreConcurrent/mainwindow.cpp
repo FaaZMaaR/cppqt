@@ -89,6 +89,9 @@ void MainWindow::StartRace(void){
         auto result1=QtConcurrent::run(&ExampleRace::DoWork,concurRace1,&number,true,ui->sb_initNum->value());
         auto result2=QtConcurrent::run(&ExampleRace::DoWork,concurRace2,&number,true,ui->sb_initNum->value());
 
+        Q_UNUSED(result1);
+        Q_UNUSED(result2);
+
     }
     else{
         race1->operate(&number, ui->rb_mutexOn->isChecked(), ui->sb_initNum->value());
