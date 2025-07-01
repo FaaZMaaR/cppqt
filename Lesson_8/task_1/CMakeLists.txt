@@ -29,15 +29,10 @@ add_executable(08_DataBase_lect
 )
 
 #Указываем директорию с библиотеками
-target_link_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/PG_Libs)
+#target_link_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/PG_Libs)
 
 target_link_libraries(08_DataBase_lect PRIVATE Qt6::Widgets
                                                Qt6::Sql
-                                               Qt6::Concurrent
-                                               libcrypto-3-x64
-                                               libiconv-2
-                                               libintl-9
-                                               libpq
-                                               libssl-3-x64)
+                                               Qt6::Concurrent)
 
 
